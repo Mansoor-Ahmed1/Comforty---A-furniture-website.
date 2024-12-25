@@ -1,101 +1,132 @@
 import Image from "next/image";
+import ChairIcon from '@mui/icons-material/Chair';
+import DoneIcon from '@mui/icons-material/Done';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import FeaturedProducts from "./components/featuredProducts";
+import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <nav className="bg-[#272343] size-full h-11 flex p-2 pl-24" >
+        <div className="flex">
+          <DoneIcon />
+          <div>  Free shipping on all orders over $50 </div>
+        </div>
+        <div className="flex gap-5 pr-24 ml-auto">
+          <div className="flex">
+            <div>Eng</div>
+            <ExpandMoreIcon className="my-auto hover:cursor-pointer" />
+          </div>
+          <div>Faqs</div>
+          <div className="flex">
+            <HelpOutlineOutlinedIcon fontSize="small" className="my-auto hover:cursor-pointer" />
+            <div>Need Help</div>
+          </div>
+        </div>
+      </nav>
+      <nav className="bg-[#F0F2F3] flex h-14 text-[#272343] justify-between items-center px-24 ">
+
+        <div className="flex my-auto hover:cursor-pointer"><ChairIcon className="text-[#029FAE] my-auto" />
+          <div className="my-auto text-2xl p-2"> Comforty</div>
+        </div>
+
+        <div className="bg-[#FFFFFF] py-1 px-2 flex gap-1 items-center rounded-lg hover:cursor-pointer">
+          <ShoppingCartOutlinedIcon fontSize="inherit" className="my-auto" />
+          <div>Cart</div>
+          <div className="bg-[#007580] w-5 h-5 rounded-full mx-1 flex items-center justify-center text-white font-bold text-[10px]">
+            2
+          </div>
+
+        </div>
+
+      </nav>
+      <nav className="bg-[FFFFFF] text-[#636270] flex justify-between px-24 py-5">
+        <div className="flex gap-8 ">
+          <div className="hover:text-[#029FAE] cursor-pointer">Home</div>
+          <div className="hover:text-[#029FAE] cursor-pointer" >Shop</div>
+          <div className="hover:text-[#029FAE] cursor-pointer" >Product</div>
+          <div className="hover:text-[#029FAE] cursor-pointer" >Pages</div>
+          <div className="hover:text-[#029FAE] cursor-pointer" >About</div>
+        </div>
+        <div className="flex gap-3">
+          <div>Contact: </div>
+          <div className="text-black">(808) 555-0111 </div>
+        </div>
+      </nav>
+      <main>
+        <div className="bg-[#F0F2F3] text-[#272343] w-3/4 h-2/6 mx-auto rounded-bl-3xl">
+
+          <div className="flex">
+            <div className="w-1/2 my-auto p-16 ">
+              <div className="tracking-widest"> WELCOME TO CHAIRY</div>
+              <div className="font-bold text-5xl"> Best Furniture Collection For Your Interior.</div>
+            </div>
+            <div className="flex my-12 mx-auto"><Image
+              className="m-auto"
+              src="/images/mainHomePic.png" alt="sofa pic" height={400} width={252} /></div>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <div className="flex gap-20 w-3/4 mx-auto mt-8 ">
+        <div><Image src='/images/c1.png' alt='company1' width={65} height={4} /></div>
+        <div><Image src='/images/c2.png' alt='company2' width={65} height={4} /></div>
+        <div><Image src='/images/c3.png' alt='company3' width={65} height={4} /></div>
+        <div><Image src='/images/c4.png' alt='company4' width={65} height={4} /></div>
+        <div><Image src='/images/c5.png' alt='company5' width={65} height={4} /></div>
+        <div><Image src='/images/c6.png' alt='company6' width={65} height={4} /></div>
+        <div><Image src='/images/c7.png' alt='company7' width={65} height={4} /></div>
+      </div>
+
+
+      <div>
+        <div className="text-[#272343] font-bold text-3xl w-3/4 mx-auto mt-10"> Featured Products
+        </div>
+
+        <div className="flex gap-5 w-3/4 mx-auto mt-8">
+          <div className='text-[#272343]'>
+            <Image
+              src={"/images/fp1.png"}
+              alt={"Chair's picture"}
+              width={225}
+              height={54}
+            />
+            <div className='flex justify-between'>
+              <div className=''>
+                <div className="text-[#007580]">Library Stool Chair</div>
+                <div className='px-1'>$20</div>
+              </div>
+              <AddShoppingCartOutlinedIcon fontSize='large' className="my-auto text-[#029FAE]" />
+            </div>
+          </div>
+
+          <div className='text-[#272343]'>
+            <Image
+              src={"/images/fp2.png"}
+              alt={"Chair's picture"}
+              width={225}
+              height={54}
+            />
+            <div className='flex justify-between'>
+              <div className=''>
+                <div>Library Stool Chair</div>
+                <div className="flex">
+                  <div className='px-1'>$20</div>
+                  <div className="line-through text-[#9A9CAA]">$30</div>
+                </div>
+
+              </div>
+              <AddShoppingCartOutlinedIcon fontSize='large' className="my-auto" />
+            </div>
+          </div>
+          <FeaturedProducts imageSrc="/images/fp3.png" title="Library Stool Chair" price={20} />
+          <FeaturedProducts imageSrc="/images/fp4.png" title="Library Stool Chair" price={20} />
+        </div>
+      </div>
+    </>
+
   );
 }
