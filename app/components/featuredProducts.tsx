@@ -4,8 +4,6 @@ import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutl
 
 interface FeaturedProductsProps {
     imageSrc: string;
-    title: string;
-    price: number;
 }
 
 const FeaturedProducts: React.FC<FeaturedProductsProps> = (props) => {
@@ -13,16 +11,17 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = (props) => {
         <div className='text-[#272343]'>
             <Image
                 src={props.imageSrc}
-                alt={props.title}
+                alt={"Product's inage"}
                 width={225}
                 height={54}
+                className='hover:cursor-pointer'
             />
             <div className='flex justify-between'>
                 <div className=''>
-                    <div>{props.title}</div>
-                    <div className='px-1'>${props.price}</div>
+                    <div>Library Stool Chair</div>
+                    <div className='px-1'>$20</div>
                 </div>
-                <AddShoppingCartOutlinedIcon fontSize='large' className="my-auto" />
+                <AddShoppingCartOutlinedIcon fontSize='large' className="my-auto hover:cursor-pointer" />
             </div>
         </div>
     );
