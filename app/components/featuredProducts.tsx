@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
-
+// Featured Products on HomePage
 interface FeaturedProductsProps {
     imageSrc: string;
 }

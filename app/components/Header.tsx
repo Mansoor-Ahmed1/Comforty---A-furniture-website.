@@ -6,6 +6,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import DoneIcon from "@mui/icons-material/Done";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import SinglePageProduct from "../Shop/page";
 
 const Header = () => {
   const router = useRouter();
@@ -43,7 +44,6 @@ const Header = () => {
             <div className="my-auto text-2xl p-2"> Comforty</div>
           </div>
         </Link>
-
         <div className="bg-[#FFFFFF] py-1 px-2 flex gap-1 items-center rounded-lg hover:cursor-pointer">
           <ShoppingCartOutlinedIcon fontSize="inherit" className="my-auto" />
           <div>Cart</div>
@@ -52,14 +52,14 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <nav className="bg-[FFFFFF] text-[#636270] flex justify-between px-24 py-5">
+      <nav className="bg-[FFFFFF] text-[#636270] flex justify-between px-24 py-5 border-b-2 border-b-[##F0F2F3]">
         <div className="flex gap-8">
           <div className="text-[#029FAE] cursor-pointer">
             {" "}
             <Link href="/">Home</Link>
           </div>
           <div className="hover:text-[#029FAE] cursor-pointer">
-            <Link href="/Products">Shop</Link>
+            <Link href="/Shop">Shop</Link>
           </div>
           <div className="hover:text-[#029FAE] cursor-pointer">
             {" "}

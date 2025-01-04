@@ -13,7 +13,7 @@ const ProductPage = () => {
   return (
     <div>
       <Header />
-      <div className="w-3/4 mx-auto mt-24">
+      <div className="w-3/4 mx-auto mt-16">
         <div className="text-3xl text-[#272343]">All Products</div>
         <div className="grid grid-cols-4 py-10 gap-y-16 gap-x-5">
           <NewProducts imageSrc="/images/fp1.png" />
