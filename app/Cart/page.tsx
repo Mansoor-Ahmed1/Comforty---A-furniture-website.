@@ -16,7 +16,7 @@ const Cart = () => {
             <CartItem src="/images/fp3.png" />
             <CartItem src="/images/tc1.png" />
           </div>
-          <div className="text-[#111111] px-5">
+          <div className="text-[#111111]">
             <div className="text-2xl font-semibold">Summary</div>
             <div className="flex justify-between pt-7">
               <div>Subtotal</div>

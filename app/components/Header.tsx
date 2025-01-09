@@ -7,6 +7,10 @@ import DoneIcon from "@mui/icons-material/Done";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import SinglePageProduct from "../Shop/page";
+import ContactUs from "../Contact-us/page";
+import FAQs from "../FAQs/page";
+import Cart from "../Cart/page";
+import AboutUsPage from "../About-us/page";
 
 const Header = () => {
   const router = useRouter();
@@ -24,14 +28,19 @@ const Header = () => {
             <div>Eng</div>
             <ExpandMoreIcon className="my-auto hover:cursor-pointer" />
           </div>
-          <div>Faqs</div>
-          <div className="flex">
-            <HelpOutlineOutlinedIcon
-              fontSize="small"
-              className="my-auto hover:cursor-pointer"
-            />
-            <div>Need Help</div>
+          <div className="hover:cursor-pointer">
+            {" "}
+            <Link href="/FAQs"> Faqs</Link>
           </div>
+          <Link href="/Contact-us">
+            <div className="flex">
+              <HelpOutlineOutlinedIcon
+                fontSize="small"
+                className="my-auto hover:cursor-pointer"
+              />
+              <div>Need Help</div>
+            </div>
+          </Link>
         </div>
       </nav>
       <nav className="bg-[#F0F2F3] flex h-14 text-[#272343] justify-between items-center px-24 ">
@@ -44,13 +53,15 @@ const Header = () => {
             <div className="my-auto text-2xl p-2"> Comforty</div>
           </div>
         </Link>
-        <div className="bg-[#FFFFFF] py-1 px-2 flex gap-1 items-center rounded-lg hover:cursor-pointer">
-          <ShoppingCartOutlinedIcon fontSize="inherit" className="my-auto" />
-          <div>Cart</div>
-          <div className="bg-[#007580] w-5 h-5 rounded-full mx-1 flex items-center justify-center text-white font-bold text-[10px]">
-            2
+        <Link href="/Cart">
+          <div className="bg-[#FFFFFF] py-1 px-2 flex gap-1 items-center rounded-lg hover:cursor-pointer">
+            <ShoppingCartOutlinedIcon fontSize="inherit" className="my-auto" />
+            <div>Cart</div>
+            <div className="bg-[#007580] w-5 h-5 rounded-full mx-1 flex items-center justify-center text-white font-bold text-[10px]">
+              2
+            </div>
           </div>
-        </div>
+        </Link>
       </nav>
       <nav className="bg-[FFFFFF] text-[#636270] flex justify-between px-24 py-5 border-b-2 border-b-[##F0F2F3]">
         <div className="flex gap-8">
@@ -66,7 +77,11 @@ const Header = () => {
             <Link href="/Products">Product</Link>
           </div>
           <div className="hover:text-[#029FAE] cursor-pointer">Pages</div>
-          <div className="hover:text-[#029FAE] cursor-pointer">About</div>
+          <div className="hover:text-[#029FAE] cursor-pointer">
+            <Link href='/About-us'>
+            About
+            </Link>
+            </div>
         </div>
         <div className="flex gap-3">
           <div>Contact: </div>

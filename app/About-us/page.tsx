@@ -3,74 +3,132 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import TextFields from "../components/text-fields_about-us";
-import { FaLocationDot } from "react-icons/fa6";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaClock } from "react-icons/fa";
+import Image from "next/image";
+import { FaShippingFast } from "react-icons/fa";
+import { GoVerified } from "react-icons/go";
+import { CiCreditCard1 } from "react-icons/ci";
+import { PiPlantThin } from "react-icons/pi";
 
-const AboutUs = () => {
+const AboutUsPage = () => {
   return (
     <div>
       <Header />
-      <div className="w-3/4 mx-auto">
-        <div className="text-[#000000] font-bold text-3xl mt-16 text-center">
-          Get In Touch With Us
-        </div>
-        <div className="flex justify-center">
-          <div className="text-[#9F9F9F] w-2/3 text-center mt-5">
-            For More Information About Our Product & Services. Please Feel Free
-            To Drop Us An Email. Our Staff Always Be There To Help You Out. Do
-            Not Hesitate!
-          </div>
-        </div>
-        <div className="flex mt-20">
-          <div className="w-1/2 text-[#000000]">
-            <div className="flex gap-3">
-              <div className="text-4xl my-auto">
-                <FaLocationDot />
-              </div>
-              <div>
-                <div className="font-semibold text-xl">Address</div>
-                <div className="w-2/3">
-                  236 5th SE Avenue, New York NY10000, United States
-                </div>
-              </div>
+      <div className="w-3/4 mx-auto ">
+        <div className="flex mt-20 gap-x-4">
+          <div className="w-1/2 bg-[#007580]">
+            <div className="font-bold text-2xl pl-6 pt-16">
+              About Us - Comforty
             </div>
-            <div className="flex mt-20 gap-3">
-              <div className="text-4xl my-auto">
-                <FaPhoneAlt />
-              </div>
-              <div>
-                <div className="font-semibold text-xl">Phone</div>
-                <div>Mobile: +(84) 546-6789</div>
-                <div>Hotline: +(84) 456-6789</div>
-              </div>
+            <div className="px-6">
+              At Comforty, we believe that the right chair can transform your
+              space and elevate your comfort. Specializing in ergonomic design,
+              premium materials, and modern aesthetics, we craft chairs that
+              seamlessly blend style with functionality.{" "}
             </div>
-            <div className="flex mt-20 gap-3">
-              <div className="text-4xl my-auto">
-                <FaClock />
-              </div>
-              <div>
-                <div className="font-semibold text-xl">Working Time</div>
-                <div>Monday-Friday: 9:00 - 22:00 </div>
-                <div>Saturday-Sunday: 9:00 - 21:00</div>
-              </div>
-            </div>
+            <button className="bg-[#f9f9f926] p-4 mt-24 ml-10">
+              View collection
+            </button>
           </div>
           <div className="w-1/2">
-            <TextFields title="Your name" placeholder="Abc" />
-            <TextFields title="Email address" placeholder="Abc@def.com"/>
-            <TextFields title="Subject" placeholder="This is optional"/>
-            <TextFields title="Message" placeholder="Hi! i'd like to ask about" paddingBottom={40}/>
-            <button className="bg-[#029FAE] border-2 border-[#B88E2F] py-5 w-3/4 rounded-lg">Submit</button>
+            <Image
+              src="/images/fp1.png"
+              width={400}
+              height={300}
+              alt="Product Image"
+            ></Image>
           </div>
         </div>
-      </div>
-      <div className="w-3/4 mx-auto flex bg-[#F4F4F4]">fdsf
+        <div>
+          <div className="font-bold text-3xl text-[#272343] mt-20 text-center">
+            What makes our Brand Different
+          </div>
+          <div className="text-[#007580] grid grid-cols-4 gap-x-3 mt-10">
+            <div className="bg-[#F9F9F9] p-4">
+              <div className="text-3xl">
+                <FaShippingFast />
+              </div>
+              <div className="text-xl">Next day as standard</div>
+              <div>
+                Order before 3pm and get your order the next day as standard
+              </div>
+            </div>
+            <div className="bg-[#F9F9F9] p-4">
+              <div className="text-3xl">
+                <GoVerified />
+              </div>
+              <div className="text-xl">Next day as standard</div>
+              <div>
+                Order before 3pm and get your order the next day as standard
+              </div>
+            </div>
+            <div className="bg-[#F9F9F9] p-4">
+              <div className="text-3xl">
+                <CiCreditCard1 />
+              </div>
+              <div className="text-xl">Next day as standard</div>
+              <div>
+                Order before 3pm and get your order the next day as standard
+              </div>
+            </div>
+            <div className="bg-[#F9F9F9] p-4">
+              <div className="text-3xl">
+                <PiPlantThin />
+              </div>
+              <div className="text-xl">Next day as standard</div>
+              <div>
+                Order before 3pm and get your order the next day as standard
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="text-[#272343] font-semibold text-2xl my-20">
+            Our Popular Products{" "}
+          </div>
+          <div className="grid grid-cols-4 gap-5">
+            <div className="col-span-2">
+              <Image
+                src="/images/opp1.png"
+                width={474}
+                height={100}
+                alt="Product Image"
+              />
+              <div className="text-[#2A254B]">
+                <div className="pt-1">The Poplar suede sofa</div>
+                <div>$99.00</div>
+              </div>
+            </div>
+
+            <div className="">
+              <Image
+                src="/images/opp2.png"
+                width={230}
+                height={100}
+                alt="Product Image"
+              />{" "}
+              <div className="text-[#2A254B]">
+                <div className="pt-1">The Dandy chair</div>
+                <div>$99.00</div>
+              </div>
+            </div>
+            <div>
+              <Image
+                src="/images/opp3.png"
+                width={230}
+                height={100}
+                alt="Product Image"
+              />{" "}
+              <div className="text-[#2A254B]">
+                <div className="pt-1">The Dandy chair</div>
+                <div>$99.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
   );
 };
 
-export default AboutUs;
+export default AboutUsPage;
