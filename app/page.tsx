@@ -39,7 +39,7 @@ export default function Home() {
         <div>
           <Image src="/images/c1.png" alt="company1" width={65} height={4} />
         </div>
-          <div>
+        <div>
           <Image src="/images/c2.png" alt="company2" width={65} height={4} />
         </div>
         <div>
@@ -65,18 +65,10 @@ export default function Home() {
         </div>
 
         <div className="flex gap-5 w-3/4 mx-auto mt-8">
-          <NewProducts
-            imageSrc="/images/fp1.png"
-          />
-          <SaleProducts
-            imageSrc="/images/fp2.png"
-          />
-          <FeaturedProducts
-            imageSrc="/images/fp3.png"
-          />
-          <FeaturedProducts
-            imageSrc="/images/fp4.png"
-          />
+          <NewProducts imageSrc="/images/fp1.png" />
+          <SaleProducts imageSrc="/images/fp2.png" />
+          <FeaturedProducts imageSrc="/images/fp3.png" />
+          <FeaturedProducts imageSrc="/images/fp4.png" />
         </div>
       </div>
 
@@ -107,7 +99,10 @@ export default function Home() {
       {/* w-3/4 mx-auto */}
 
       <div className=" h-[333px] flex w-3/4 mx-auto">
-        <div className="-rotate-90 text-[#000000] text-3xl mt-40 w-10 h-[100%]">
+        <div
+          className="rotate-180 text-[#000000] text-3xl mt-24 w-100 h-[140%]"
+          style={{ writingMode: "vertical-rl" }}
+        >
           Explore new and popular styles
         </div>
         <div className="flex gap-3 mt-32">
@@ -179,27 +174,13 @@ export default function Home() {
               />
             </div>
           </div>
-          <SaleProducts
-            imageSrc="/images/fp2.png"
-          />
-          <FeaturedProducts
-            imageSrc="/images/fp3.png"
-          />
-          <FeaturedProducts
-            imageSrc="/images/fp4.png"
-          />
-          <NewProducts
-            imageSrc="/images/tc1.png"
-          />
-          <SaleProducts
-            imageSrc="/images/enaps1.jpg"
-          />
-          <FeaturedProducts
-            imageSrc="/images/op1.png"
-          />
-          <FeaturedProducts
-            imageSrc="/images/fp1.png"
-          />
+          <SaleProducts imageSrc="/images/fp2.png" />
+          <FeaturedProducts imageSrc="/images/fp3.png" />
+          <FeaturedProducts imageSrc="/images/fp4.png" />
+          <NewProducts imageSrc="/images/tc1.png" />
+          <SaleProducts imageSrc="/images/enaps1.jpg" />
+          <FeaturedProducts imageSrc="/images/op1.png" />
+          <FeaturedProducts imageSrc="/images/fp1.png" />
         </div>
       </div>
       <Footer />
