@@ -6,12 +6,6 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import DoneIcon from "@mui/icons-material/Done";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import SinglePageProduct from "../Shop/page";
-import ContactUs from "../Contact-us/page";
-import FAQs from "../FAQs/page";
-import Cart from "../Cart/page";
-import AboutUsPage from "../About-us/page";
-
 const Header = () => {
   const router = useRouter();
 
