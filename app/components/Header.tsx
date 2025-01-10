@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="bg-[#272343] size-full h-11 flex p-2 pl-24">
         <div className="flex">
           <DoneIcon />
-          <div> Free Shipping on All Orders over $50 </div>
+          <div> Free Shipping on All Orders Over $50 </div>
         </div>
         <div className="flex gap-5 pr-24 ml-auto">
           <div className="flex">
