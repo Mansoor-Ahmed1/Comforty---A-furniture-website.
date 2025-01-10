@@ -4,18 +4,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import DoneIcon from "@mui/icons-material/Done";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 const Header = () => {
-  const router = useRouter();
-
   return (
     <div>
       {" "}
       <nav className="bg-[#272343] size-full h-11 flex p-2 pl-24">
         <div className="flex">
           <DoneIcon />
-          <div> Free shipping on all orders over $50 </div>
+          <div> Free Shipping on All Orders over $50 </div>
         </div>
         <div className="flex gap-5 pr-24 ml-auto">
           <div className="flex">
